@@ -1,9 +1,28 @@
-console.log("Hello World");
+// Напишите программу на JavaScript, которая будет высчитывать сумму чисел кратных 3 или 5. Числа должны быть до 1000
+
 let summ = 0;
+
 for(let i = 0; i<1000; i++){
 
   if ((i%3 == 0) || (i%5 == 0))
     summ+=i;
 
 }
-console.log(summ);
+console.log('Сумма чисел кратных 3 или 5 в пределах 1000: '+ summ);
+
+console.log('');
+
+ // Создайте двумерный массив, в котором найдите минимальный элемент среди всех элементов в массиве. Важно учесть, что нахождение минимального массива должен производиться при помощи циклов.
+
+var x = new Array(new Array(20, 34, 2), new Array(9, 12, 18), new Array(3, 4, 5));
+
+var min = x[0][0];
+
+x.forEach(function(item, i, xarr){
+  item.forEach(function(item, i, xelem){
+    min  = item < min ? item :min;
+  });
+});
+
+console.log('Минимальный элемент в масиве: ' + x + '\n' +
+            'Равен: '+ min);
